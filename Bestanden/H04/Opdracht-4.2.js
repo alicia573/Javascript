@@ -18,4 +18,4 @@ function getFish(){
 
   return teller;
 }
-document.getAnimations("img/fish1.jpg");
+
