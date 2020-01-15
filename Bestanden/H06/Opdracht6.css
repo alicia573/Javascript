@@ -1,0 +1,363 @@
+#wrapper{
+  background-color: dodgerblue;
+  width: 1000px;
+  margin: auto;
+  border: 3px black solid;
+}
+#wrapper2{
+  margin: auto;
+  background-color: dodgerblue;
+  indent-edge-reset: border-edge;
+  height:1100px ;
+  width: 1400px;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  height: 815px;
+}
+nav{
+  width: 500px;
+  height: 100px;
+  padding-bottom: 300px;
+}
+.img{
+  width: 200px;
+  height: 200px;
+}
+a{
+ font-size: 100px;
+  border: 5px black double;
+  background-color: aquamarine;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+header{
+  font-size: 40px;
+  font-family: Magneto;
+  text-align: center;
+  margin-top: -45px
+
+}
+footer{
+  color: white;
+  height: 150px;
+  background-color: black;
+}
+@font-face {
+  font-family: Magneto;
+  font-size: 20px;
+
+}
+@font-face {
+  font-family: Magneto;
+  font-size: 20px;
+
+}
+h2{
+  font-family: Magneto;
+  width: 200px;
+}
+
+.game-info{
+  font-size: 20px;
+  padding-left: 55px;
+  padding-right: 1100px;
+  margin-top: -90px;
+}
+#img-logo{
+  padding-top: 20px;
+}
+#img-container{
+  border: 0px black solid;
+  background-color: orange;
+}
+.card{
+  border: 2px black;
+  height: calc(180px);
+  width: calc(180px);
+  position: relative;
+  transform: scale(1);
+  margin: -8px;
+  padding: 10px;
+  transform-style: preserve-3d ;
+  transition: transform .5s ;
+}
+.card:active{
+  transform: scale(.97);
+  transition: transform .2s;
+}
+.card.flip{
+transform: rotateY(180deg);
+}
+.span{
+  font-family: Magneto;
+}
+.game-container{
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  perspective: 1000px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.card-value,
+.card-back{
+  border-radius: 40px;
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  backface-visibility: hidden ;
+  padding: 30px 40px 40px 50px;
+}
+.card-value{
+  transform: rotateY(180deg);
+  margin-left: -55px;
+}
+@media all and (max-width:1000px ) {
+  #wrapper2{
+    background-color: yellow;
+    width: 1400px;
+  }
+  .card-value,
+  .card-back{
+    border-radius: 40px;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    backface-visibility: hidden ;
+    padding: 20px;
+  }
+  .card-value{
+    transform: rotateY(180deg);
+    margin-left: -49px;
+  }
+  .card{
+    border: 2px black;
+    height: calc(150px);
+    width: calc(150px);
+    position: relative;
+    transform: scale(1);
+    margin: auto;
+    padding-right: 50px;
+    transform-style: preserve-3d ;
+    transition: transform .5s ;
+    margin-left: -19px;
+  }
+
+  .game-container{
+    height:740px ;
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    margin-left: -20px;
+  }
+  header{
+    margin-left: -90px;
+  }
+
+  .game-info{
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 500px;
+    margin-top: 0px;
+  }
+}
+
+@media all and (min-width: 569px)and (max-width: 800px) {
+  #wrapper2{
+    background-color: lavender;
+  }
+  .game-info-container{
+
+  }
+  header{
+    font-size: 27px;
+    margin-top: -20px;
+    margin-left: 10px;
+  }
+
+  .card-value{
+     transform: rotateY(180deg);
+     margin-left: -20px;
+   }
+  .card{
+    border: 2px black;
+    height: calc(110px);
+    width: calc(110px);
+    position: relative;
+    transform: scale(1);
+    margin-left: -15px;
+    padding: initial;
+    transform-style: preserve-3d ;
+    transition: transform .5s ;
+  }
+  .game-container{
+    height:740px ;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 500px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+
+}
+
+
+@media all and  (max-width: 569px) and (min-width: 300px){
+  #wrapper2{
+    background-color: blueviolet;
+    width: 750px;
+  } .game-info-container{
+      width: 400px;
+    }
+  .card{
+    border: 2px black;
+    height: calc(110px);
+    width: calc(110px);
+    position: relative;
+    transform: scale(1);
+    padding: revert;
+    transform-style: preserve-3d ;
+    transition: transform .5s ;
+    margin-left: -10px;
+  }
+  .game-container{
+    height:740px ;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 500px;
+    margin-right: 20px;
+    margin-left: -30px;
+    padding-bottom: 50px;
+  }
+  header{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  #img-container{
+    border: 0px black solid;
+    background-color: orange;
+    height: 10px;
+  }
+  .game-info{
+    font-size: 20px;
+    padding-left: 30px;
+  }
+  .game-info2{
+    font-size: 20px;
+    padding-left: 300px;
+    margin-top: -110px;
+  }
+  @media screen and  (min-width: 1000px)and (max-width: 1150px) {
+    #wrapper2{
+      background-color: pink;
+      width: 750px;
+    } .game-info-container{
+        width: 400px;
+      }
+    header{
+      font-size: 20px;
+      padding-left: -100px;
+      margin-top:-300px
+    }
+    .card{
+      border: 2px black;
+      height: calc(110px);
+      width: calc(110px);
+      position: relative;
+      transform: scale(1);
+      padding: revert;
+      transform-style: preserve-3d ;
+      transition: transform .5s ;
+    }
+    .game-container{
+      height:740px ;
+      width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      perspective: 500px;
+      padding-left: 20px;
+      padding-right: 10px;
+      padding-bottom: 50px;
+    }
+  }
+  @media screen and (min-width: 800px) and (max-width: 1000px) {
+    #wrapper2{
+      background-color: blue;
+      width: 750px;
+    }
+    header{
+      font-size: 20px;
+      padding-left: -100px;
+    }
+    .card{
+      border: 2px black;
+      height: calc(110px);
+      width: calc(110px);
+      position: relative;
+      transform: scale(1);
+      padding: revert;
+      transform-style: preserve-3d ;
+      transition: transform .5s ;
+    }
+    .game-container{
+      height:740px ;
+      width: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      perspective: 500px;
+      padding-left: 20px;
+      padding-right: 10px;
+      padding-bottom: 50px;
+    }
+  }
+  @media screen and (min-width: 400px) and (max-width: 500px) {
+    #wrapper2{
+      background-color: pink;
+      width: 412px;
+    } .game-info-container{
+        width: 380px;
+      }
+      header{
+        margin-left: 10px;
+      }
+    .card{
+      border: 2px black;
+      height: calc(110px);
+      width: calc(110px);
+      position: relative;
+      transform: scale(1);
+      padding: revert;
+      transform-style: preserve-3d ;
+      transition: transform .5s ;
+    }
+    .game-container{
+      height:740px ;
+      width: 400px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      perspective: 500px;
+     margin-left: -20px;
+      padding-bottom: 50px;
+    }
+  }
+
+}
