@@ -1,53 +1,58 @@
 
-    const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card');
 
-    let hasFlippedCard = false;
-    let firstCard, secondCard;
-    let lockBoard = false;
-    var setScoreText;
+let hasFlippedCard = false;
+let firstCard, secondCard;
+let lockBoard = false;
+var setScoreText;
 
-    function flipCard(){
-      if( lockBoard) return;
-      if(this === firstCard)return;
+function flipCard(){
+  if( lockBoard) return;
+  if(this === firstCard)return;
 
-      this.classList.add('flip');
+  this.classList.add('flip');
 
-      if(!hasFlippedCard){
-      //first click
-        hasFlippedCard = true;1
-        firstCard = this;
+  if(!hasFlippedCard){
+    //first click
+    hasFlippedCard = true;
+    firstCard = this;
 
-      return;
-      }
-       //second click
+    return;
+  }
+  //second click
 
-       secondCard = this;
+  secondCard = this;
 
-       checkForMath();
-    }
-    function checkForMath (){
-      let isMatch = firstCard.dataset.framework ===
-        secondCard.dataset.framework;
-      isMatch ? disableCards(): unFlipCards();addClicker();
-    }
-    //score settling
-    var score = 0;
-    var clickers = 0;
+  checkForMath();
+}
+function checkForMath (){
+  let isMatch = firstCard.dataset.framework ===
+    secondCard.dataset.framework;
+  isMatch ? disableCards(): unFlipCards(); winner();
+  isMatch ? scoreUp(0): addClicker(); winner();
+}
+//score settling
+var score = 0;
+var clickers = 0;
 
     function scoreUp(num){
       score = score + num;
-      document.getElementById('score').innerHTML = 'Score: ' + score;
+      score++;
+      document.getElementById('score').innerHTML =  "Score:" + score;
     }
     function addClicker(){
       if(score >= 9){
         clickers ++;
-        score = score - 10;
-        document.getElementById('score').innerHTML = 'Score: ' + score;
+        document.getElementById('score').innerHTML = "Score:"+ score;
       }
     }
-    while(1===1)
-      setTimeout(scoreUp(clickers), 1000);
 
+    function winner() {
+        if(score === 9){
+          document.getElementById('winner').innerHTML = "WINNER!! ";
+          console.log("winner");
+        }
+    }
     function disableCards (){
       firstCard.removeEventListener('click', flipCard);
       secondCard.removeEventListener('click', flipCard);
@@ -61,7 +66,7 @@
           secondCard.classList.remove('flip');
           resetBoard();
           lockBoard = false;
-        },1500);
+        },1300);
     }
     (function shuffle(){
       cards.forEach(card => {
