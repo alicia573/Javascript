@@ -156,6 +156,10 @@ margin-left: -55px;
     width: 400px;
 
   }
+  .card-value{
+    transform: rotateY(180deg);
+    margin-left: -35px;
+  }
   .card{
     padding: 0px;
     margin-left: -15px;
