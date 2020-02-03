@@ -43,7 +43,6 @@ a{
 
 header{
   font-size: 40px;
-  font-family: Magneto;
   text-align: center;
   margin-top: -45px
 
@@ -198,18 +197,24 @@ margin-left: -55px;
   }
   .game-info{
     width: 400px;
-    margin-left: 70px;
   }
   #wrapper2{
     height: 150%;
     background: purple;
+  }
+  header{
+    font-size: 30px;
+
+  }
+  .card{
+    padding: 0px;
+    margin-left: -22px;
   }
 }
 @media all and (max-width: 320px) {
   .game-container{
     width: 500px;
     padding-left: 0px;
-    margin-left: 30px;
     padding-right: 0px;
   }
   .card-value,
@@ -219,9 +224,11 @@ margin-left: -55px;
   }
   .game-info{
     width: 400px;
-    margin-left: 70px;
   }
   #wrapper2{
     height: 150%;
+  }
+  .card{
+    margin-left: -20px;
   }
 }
