@@ -16,7 +16,6 @@ function flipCard(){
     //first click
     hasFlippedCard = true;
     firstCard = this;
-
     return;
   }
   //second click
@@ -25,11 +24,16 @@ function flipCard(){
 
   checkForMath();
 }
+function flipSound() {
+  if(hasFlippedCard){
+    mySound = new sound("video.mp4");
+  }
+}
 function checkForMath (){
   let isMatch = firstCard.dataset.framework ===
     secondCard.dataset.framework;
-  isMatch ? disableCards(): unFlipCards(); winner();
-  isMatch ? scoreUp(0): addClicker(); winner();
+  isMatch ? disableCards(): unFlipCards(); winner();flipSound();
+  isMatch ? scoreUp(0): addClicker(); winner();flipSound();
 }
 //score settling
 var score = 0;
