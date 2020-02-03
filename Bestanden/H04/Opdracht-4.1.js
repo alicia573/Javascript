@@ -11,7 +11,7 @@ var mijnauto = {
 
   }
 }
-console.log(mijnauto.kleur);
+
 console.log(mijnauto.gasgeven());
 console.log(mijnauto.gasgeven());
 console.log(mijnauto.gasgeven());

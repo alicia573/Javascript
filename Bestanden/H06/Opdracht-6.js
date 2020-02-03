@@ -24,16 +24,12 @@ function flipCard(){
 
   checkForMath();
 }
-function flipSound() {
-  if(hasFlippedCard){
-    mySound = new sound("video.mp4");
-  }
-}
+
 function checkForMath (){
   let isMatch = firstCard.dataset.framework ===
     secondCard.dataset.framework;
-  isMatch ? disableCards(): unFlipCards(); winner();flipSound();
-  isMatch ? scoreUp(0): addClicker(); winner();flipSound();
+  isMatch ? disableCards(): unFlipCards(); winner();
+  isMatch ? scoreUp(0): addClicker(); winner();
 }
 //score settling
 var score = 0;
@@ -52,10 +48,12 @@ var clickers = 0;
     }
 
     function winner() {
-        if(score === 9){
-          document.getElementById('winner').innerHTML = "WINNER!! ";
-          console.log("winner");
-        }
+      let mySound;
+      if (score === 9) {
+        document.getElementById('winner').innerHTML = "WINNER!! ";
+        console.log("winner");
+        mySound = new sound("bounce.mp3");
+      }
     }
     function disableCards (){
       firstCard.removeEventListener('click', flipCard);

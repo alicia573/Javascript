@@ -58,11 +58,6 @@ footer{
   font-size: 20px;
 
 }
-@font-face {
-  font-family: Magneto;
-  font-size: 20px;
-
-}
 h2{
   width: 200px;
   margin-top: 0px;
@@ -70,7 +65,7 @@ h2{
 }
 .game-info{
   width: 960px;
-  margin-left: 40px;
+  margin-left: 45px;
   border: 2px rgb(0, 0, 0) solid;
   border-radius: 20px;
 }
@@ -78,7 +73,6 @@ h2{
 #score{
   margin-left: 50px;
   font-size: 30px;
-  height: 20px;
   font-variant: small-caps;
 }
 #winner{
@@ -147,252 +141,87 @@ padding: 30px 40px 40px 40px;
 transform: rotateY(180deg);
 margin-left: -55px;
 }
-@media all and  (max-width:1000px )
-{
-    #wrapper2{
-    background-color: yellow;
-    width: 1400px;
-    }
-    .card-value,
-    .card-back{
-    border-radius: 40px;
-    position: absolute;
-    width: 120%;
+
+@media all and (min-width: 650px) and (max-width: 960px) {
+  .game-container{
+    width: 500px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .card-value,
+  .card-back{
     height: 120%;
-    backface-visibility: hidden ;
-    padding: 20px;
-    }
-    .card-value{
-    transform: rotateY(180deg);
-    margin-left: -49px;
-    }
-    .card{
-    border: 2px black;
-    height: calc(150px);
-    width: calc(150px);
-    position: relative;
-    transform: scale(1);
-    margin: auto;
-    padding-right: 50px;
-    transform-style: preserve-3d ;
-    transition: transform .5s ;
-    margin-left: -19px;
-    }
-    #winner{
-      margin-left: -20px;
-      font-size: 140px;
-    }
-    .game-container{
-    height:740px ;
-    width: 650px;
-    display: flex;
-    flex-wrap: wrap;
-
-    perspective: 1000px;
-    padding-right: 20px;
-
-    }
-    header{
-    margin-left:40px;
-    }
-
-    .game-info{
-      font-size: 20px;
-      width: 500px;
-      padding-right: 500px;
-    }
-}
-
-@media all and (min-width: 569px)and (max-width: 800px) {
-#wrapper2{
-background-color: orange;
-}
-  #winner {
-    margin-left: 0px;
-    font-size: 110px;
+    width: 120%;
   }
-header{
-font-size: 27px;
-margin-top: -20px;
-margin-left: 10px;
-}
-.game-info{
-  margin-left: 0px;
-  width: 100px;
-  padding-right: 440px;
-}
-
-.card-value{
-transform: rotateY(180deg);
-margin-left: -20px;
-}
-.card{
-border: 2px black;
-height: calc(110px);
-width: calc(110px);
-position: relative;
-transform: scale(1);
-margin-left: -15px;
-padding: initial;
-transform-style: preserve-3d ;
-transition: transform .5s ;
-}
-.game-container{
-height:740px ;
-width: 500px;
-display: flex;
-flex-wrap: wrap;
-margin: auto;
-perspective: 500px;
-padding-left: 20px;
-padding-right: 10px;
-padding-bottom: 50px;
-}
-
-}
-
-
-  @media all and  (max-width: 569px) and (min-width: 300px){
-  #wrapper2{
-  background-color: blueviolet;
-  width: 750px;
-  } .game-info-container{
-  width: 400px;
-  }
-  #winner{
-    margin-left: -50px;
-    font-size: 120px;
-  }
-  .game-info {
-    width: 0px;
-    margin-left: -30px;
-    border: 2px rgb(0, 0, 0) solid;
-    border-radius: 20px;
-    font-size: 20px;
-  }
-  .card{
-  border: 2px black;
-  height: calc(110px);
-  width: calc(110px);
-  position: relative;
-  transform: scale(1);
-  padding: revert;
-  transform-style: preserve-3d ;
-  transition: transform .5s ;
-  margin-left: -10px;
-  }
-  .game-container{
-  height:740px ;
-  width: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  perspective: 500px;
-  margin-right: 20px;
-  margin-left: -30px;
-  padding-bottom: 50px;
-  }
-  header{
-  font-size: 20px;
-  margin-top: 20px;
-  }
-  #img-container{
-  border: 0px black solid;
-  background-color: orange;
-  height: 10px;
-  }
-  .game-info2{
-  font-size: 20px;
-  padding-left: 300px;
-  margin-top: -110px;
-  }
-  @media screen and  (min-width: 1000px)and (max-width: 1150px) {
-  #wrapper2{
-  background-color: pink;
-  width: 750px;
-  } .game-info-container{
+  .game-info{
     width: 400px;
+    margin-left: 70px;
   }
-  header{
-  font-size: 20px;
-  padding-left: -100px;
-  margin-top:-300px
+  #wrapper2{
+    height: 150%;
+    background: pink;
   }
-  .card{
-  border: 2px black;
-  height: calc(110px);
-  width: calc(110px);
-  position: relative;
-  transform: scale(1);
-
-  }
-  #winner{
-    margin-left: -40px;
-    font-size: 80px;
-  }
+}
+@media all and (min-width: 500px)and (max-width:650px ){
   .game-container{
-  height:740px ;
-  width: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  perspective: 500px;
-  padding-left: 20px;
-  padding-right: 10px;
-  padding-bottom: 50px;
+    width: 500px;
+    padding-left: 0px;
+    margin-left: 30px;
+    padding-right: 0px;
   }
-  .game-info {
-    width: 0px;
-    margin-left: 0px;
-    border: 2px rgb(0, 0, 0) solid;
-    border-radius: 20px;
-    font-size: 20px;
+  .card-value,
+  .card-back{
+    height: 120%;
+    width: 120%;
   }
-}
-
-  @media screen and (min-width: 400px) and (max-width: 500px) {
-    #wrapper2{
-    background-color: pink;
-    width: 412px;
-    } .game-info-container{
-      width: 380px;
-    }
-    header{
-      margin-left: 10px;
-    }
-    #winner{
-      margin-left: -40px;
-      font-size: 80px;
-    }
-    .card{
-    border: 2px black;
-    height: calc(110px);
-    width: calc(110px);
-    position: relative;
-    transform: scale(1);
-    padding: revert;
-    transform-style: preserve-3d ;
-    transition: transform .5s ;
-    }
-    .game-container{
-    height:740px ;
+  .game-info{
     width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    perspective: 500px;
-    margin-left: -20px;
-    padding-bottom: 50px;
-    }
-
+    margin-left: 70px;
   }
-    .game-info {
-      width: 0px;
-      margin-left: auto;
-      padding-right: 340px;
-      border: 2px rgb(0, 0, 0) solid;
-      border-radius: 20px;
-      font-size: 20px;
-    }
+  #wrapper2{
+    height: 150%;
+    background: yellow;
+  }
 }
 
+@media all and (min-width: 320px) and (max-width: 500px){
+  .game-container{
+    width: 500px;
+    padding-left: 0px;
+    margin-left: 30px;
+    padding-right: 0px;
+  }
+  .card-value,
+  .card-back{
+    height: 120%;
+    width: 120%;
+  }
+  .game-info{
+    width: 400px;
+    margin-left: 70px;
+  }
+  #wrapper2{
+    height: 150%;
+    background: purple;
+  }
+}
+@media all and (max-width: 320px) {
+  .game-container{
+    width: 500px;
+    padding-left: 0px;
+    margin-left: 30px;
+    padding-right: 0px;
+  }
+  .card-value,
+  .card-back{
+    height: 120%;
+    width: 120%;
+  }
+  .game-info{
+    width: 400px;
+    margin-left: 70px;
+  }
+  #wrapper2{
+    height: 150%;
+  }
+}
