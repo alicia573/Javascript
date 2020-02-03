@@ -1,5 +1,6 @@
 var plaatjes = [1,2,3];
 var teller= 0;
+
 var slidertop = document.getElementById("slider-top");
 slidertop.style.backgroundImage= "url('../top/top1.jpg)";
 

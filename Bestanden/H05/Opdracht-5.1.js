@@ -1,3 +1,4 @@
+
 pics = document.getElementById("pics");
 createPicsHolders();
 creatFishImages();
@@ -35,11 +36,11 @@ creatFishImages();
     for( var i = 0; i < notsofavoriet.length; i++){
       notsofavoriet[i].style.backgroundImage = "none";
 
-
     }
-
     favoriete = document.getElementById("favoriete_" + id);
     favoriete.style.backgroundImage ="url('heart.png')";
 
   }
 
+
+document.getElementById("pics").style.cssText="width:900px; height: 1350px; border: solid 1px white; margin: auto; font-size: 0px;"
