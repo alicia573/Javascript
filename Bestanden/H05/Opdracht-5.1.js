@@ -2,16 +2,17 @@
 pics = document.getElementById("pics");
 createPicsHolders();
 creatFishImages();
+
   function createPicsHolders() {
       for(var i =1; i <= 9; i++){
         pictureHolder = document.createElement("div");
-        pictureHolder.className = "picture-holder";
+        pictureHolder.className = "fishpictures";
         pictureHolder.id = "picture-holder-" + i ;
         pics.appendChild(pictureHolder);
     }
   }
   function creatFishImages() {
-     pictureHolders = document.getElementsByClassName("picture-holder");
+     pictureHolders = document.getElementsByClassName("fishpictures");
     for ( var i = 0; i < pictureHolders.length; i++){
       favoriete = document.createElement("div");
       favoriete.className = "favoriete";
@@ -34,8 +35,7 @@ creatFishImages();
       notsofavoriet[i].style.backgroundImage = "none";
     }
     favoriete = document.getElementById("favoriete_" + id);
-    favoriete.style.backgroundImage ="url('heart.png')";
+    favoriete.style.backgroundImage ="url('img/heart.png')";
   }
 
 
-document.getElementById("pics").style.cssText="width:900px; height: 1350px; border: solid 1px white; margin: auto; font-size: 0px;"
