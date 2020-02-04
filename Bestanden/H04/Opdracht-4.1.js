@@ -3,7 +3,7 @@ var mijnauto = {
   merk:"Ford",
   snelheid:0,
   gasgeven: function () {
-    this.snelheid += 5
+    this.snelheid += 5;
     console.log(this.snelheid)
   },
   toeteren: function () {
